@@ -28,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ```  
 SELECT name, object_id  
 FROM sys.tables  
-WHERE name = 'myTable';  
+WHERE name = N'myTable';  
 GO  
 ```  
   
@@ -66,7 +66,7 @@ GO
 ```  
 CREATE PROCEDURE assumes_caller_can_access_metadata  
 BEGIN  
-SELECT name, id   
+SELECT name, object_id   
 FROM sysobjects   
 WHERE name = 'myTable';  
 END;  
@@ -87,7 +87,7 @@ AS
 BEGIN  
 SELECT name, id  
 FROM sys.objects   
-WHERE name = 'myTable'   
+WHERE name = N'myTable'   
 END;  
 GO  
 ```  
