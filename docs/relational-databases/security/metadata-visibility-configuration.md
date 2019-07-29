@@ -28,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ```  
 SELECT name, object_id  
 FROM sys.tables  
-WHERE name = 'myTable';  
+WHERE name = N'myTable';  
 GO  
 ```  
   
@@ -87,7 +87,7 @@ AS
 BEGIN  
 SELECT name, id  
 FROM sys.objects   
-WHERE name = 'myTable'   
+WHERE name = N'myTable'   
 END;  
 GO  
 ```  
