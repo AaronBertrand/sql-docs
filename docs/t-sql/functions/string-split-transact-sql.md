@@ -74,7 +74,7 @@ STRING_SPLIT outputs a single-column or double-column table, depending on the *e
 
 Note that the *enable_ordinal* argument must be a constant value, not a column or variable. It must also be either a **bit** or **int** data type with a value of 0 or 1. Otherwise, the function will raise an error.  
 
-The output rows might be in any order. The order is _not_ guaranteed to match the order of the substrings in the input string. You can override the final sort order by using an ORDER BY clause on the SELECT statement, for example, `ORDER BY value` or `ORDER BY ordinal`.
+The output rows might be in any order. The order is _not_ guaranteed to match the order of the substrings in the input string, even if `enable_ordinal` is specified. You can override the final sort order by using an ORDER BY clause on the SELECT statement, for example, `ORDER BY value` or `ORDER BY ordinal`.
 
 0x0000 (**char(0)**) is an undefined character in Windows collations and cannot be included in STRING_SPLIT.
 
